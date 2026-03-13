@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO Meta Tags -->
+    <title>Tandartspraktijk Timmerman-Cloes | Moderne Mondzorg in Zonhoven</title>
+    <meta name="description" content="Tandartspraktijk Timmerman-Cloes in Zonhoven biedt professionele, hoogwaardige mondzorg in een moderne, warme en rustgevende omgeving. Maak nu online uw afspraak.">
+    <meta name="keywords" content="tandarts, Zonhoven, tandartspraktijk, Timmerman, Cloes, mondzorg, preventie, esthetische tandheelkunde, spoed tandarts">
+    <meta name="author" content="Tandartspraktijk Timmerman-Cloes">
+    
+    <!-- Open Graph (Facebook/LinkedIn) -->
+    <meta property="og:title" content="Tandartspraktijk Timmerman-Cloes | Zonhoven">
+    <meta property="og:description" content="Hoogwaardige mondzorg in een vriendelijke en rustgevende omgeving.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.timmerman-cloes.be/">
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- ⚠️ ALERT BANNER (Sticky on top) -->
+    <div class="alert-banner" id="alertBanner" role="alert">
+        <div class="alert-content">
+            <span class="alert-badge">Update</span>
+            <p><strong>Patiëntenstop:</strong> Momenteel nemen wij helaas tijdelijk geen nieuwe patiënten aan. Bestaande patiënten kunnen online inplannen.</p>
+        </div>
+        <button class="close-alert" onclick="document.getElementById('alertBanner').style.display='none'" aria-label="Sluit melding">&times;</button>
+    </div>
+
+    <!-- HEADER & NAVIGATIE -->
+    <header class="main-header">
+        <div class="container header-container">
+            <div class="logo">
+                <a href="/">Timmerman&ndash;Cloes<span>.</span></a>
+            </div>
+            
+            <nav class="main-nav" aria-label="Hoofdnavigatie">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#behandelingen">Behandelingen</a></li>
+                    <li><a href="#team">Ons Team</a></li>
+                    <li><a href="#patient-worden">Patiënt Worden</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-actions">
+                <div class="phone-link-wrapper">
+                    <span class="pulse-dot"></span>
+                    <a href="tel:+3211234567" class="phone-link" aria-label="Bel ons voor spoed">Spoed? Bel ons</a>
+                </div>
+                <a href="#afspraak" class="btn btn-primary btn-small" aria-label="Maak direct een afspraak">Maak afspraak</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTIE -->
+    <main>
+        <section class="hero" id="home">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <h1>Moderne en <span>persoonlijke</span> mondzorg in Zonhoven.</h1>
+                    <p>Welkom bij Tandartspraktijk Timmerman-Cloes. Ervaar hoogwaardige tandheelkunde in een warme, rustgevende en professionele omgeving.</p>
+                    <div class="hero-buttons">
+                        <a href="#afspraak" class="btn btn-primary btn-large">Afspraak maken</a>
+                        <a href="tel:+3211234567" class="btn btn-outline btn-large">Spoed: 011 23 45 67</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <!-- Placeholder for high-end wood/taupe reception image -->
+                    <img src="inkomhal.jpg" alt="Warme inkomhal van de praktijk" style="border-radius: var(--radius-lg); width: 100%; height: 100%; object-fit: cover; box-shadow: var(--shadow-soft);">
+
+                </div>
+            </div>
+        </section>
+
+        <!-- BEHANDELINGEN GRID -->
+        <section class="treatments" id="behandelingen">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Onze Behandelingen</h2>
+                    <p>Uitgebreide zorg voor uw lach, van preventie tot esthetiek. State-of-the-art oplossingen op maat.</p>
+                </div>
+                <div class="grid treatments-grid">
+                    <article class="card treatment-card">
+                        <div class="card-icon" aria-hidden="true">🦷</div>
+                        <h3>Preventieve mondzorg</h3>
+                        <p>Reguliere controles en gebitsreiniging om uw tanden levenslang gezond te houden.</p>
+                    </article>
+                    <article class="card treatment-card">
+                        <div class="card-icon" aria-hidden="true">✨</div>
+                        <h3>Esthetische tandheelkunde</h3>
+                        <p>Facings, bleken en cosmetische correcties voor een stralende, natuurlijke lach.</p>
+                    </article>
+                    <article class="card treatment-card">
+                        <div class="card-icon" aria-hidden="true">👑</div>
+                        <h3>Kroon- en brugwerk</h3>
+                        <p>Duurzame, onzichtbare restauraties gemaakt van hoogwaardige materialen.</p>
+                    </article>
+                    <article class="card treatment-card">
+                        <div class="card-icon" aria-hidden="true">🧸</div>
+                        <h3>Kindertandheelkunde</h3>
+                        <p>Een zachte en geduldige aanpak speciaal ontworpen voor onze jongste patiënten.</p>
+                    </article>
+                    <article class="card treatment-card">
+                        <div class="card-icon" aria-hidden="true">🔬</div>
+                        <h3>Endodontologie</h3>
+                        <p>Pijnvrije wortelkanaalbehandelingen uitgevoerd met moderne, precieze apparatuur.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- CALENDLY & FREEFORM PLACEHOLDER OVERVIEW -->
+        <section class="appointments-booking" id="afspraak">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Plan uw Afspraak in</h2>
+                    <p>Kies een moment dat u het beste past. Nieuwe patiënten gelieve eerst het inschrijvingsformulier in te vullen.</p>
+                </div>
+                
+                <div class="grid integration-grid">
+                    <!-- Calendly Embed -->
+                    <div class="card integration-card calendly-wrap">
+                        <h3>Bestaande patiënten (Calendly)</h3>
+                        <!-- Calendly inline widget begin -->
+                        <div class="calendly-inline-widget" data-url="https://calendly.com/JOUW-LINK" style="min-width:320px;height:500px;"></div>
+                        <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+                        <!-- Calendly inline widget end -->
+                    </div>
+                    
+                    <!-- Freeform Form -->
+                    <div class="card integration-card freeform-wrap" id="patient-worden">
+                        <h3>Nieuwe patiënten (Inschrijving)</h3>
+                        <p><em>Momenteel is er een patiëntenstop, maar u kunt zich aanmelden voor de wachtlijst.</em></p>
+                        <!-- Craft CMS / Freeform placeholder -->
+                        <div class="freeform-placeholder">
+                            <form action="#" method="POST" class="form-skeleton">
+                                <label>Naam
+                                    <input type="text" placeholder="Uw volledige naam">
+                                </label>
+                                <label>E-mail
+                                    <input type="email" placeholder="Uw e-mailadres">
+                                </label>
+                                <label>Telefoonnummer
+                                    <input type="tel" placeholder="Uw telefoonnummer">
+                                </label>
+                                <button type="submit" class="btn btn-primary" style="width: 100%;">Inschrijven (Wachtlijst)</button>
+                            </form>
+                            <!-- { freeform.form('patientenInschrijving').render() } -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SOCIAL PROOF / REVIEWS -->
+        <section class="testimonials">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Wat onze patiënten zeggen</h2>
+                </div>
+                <div class="grid testimonials-grid">
+                    <div class="card testimonial-card">
+                        <div class="stars" aria-label="5 sterren">★★★★★</div>
+                        <p>"De praktijk straalt zoveel rust uit. Ik ben normaal heel bang, maar tandarts Timmerman stelde me direct op mijn gemak. Een verademing!"</p>
+                        <span class="author">- Annelies V.</span>
+                    </div>
+                    <div class="card testimonial-card">
+                        <div class="stars" aria-label="5 sterren">★★★★★</div>
+                        <p>"Prachtig, modern interieur en altijd een fantastische ontvangst. Er wordt heel transparant en professioneel gecommuniceerd."</p>
+                        <span class="author">- Koen D.</span>
+                    </div>
+                    <div class="card testimonial-card">
+                        <div class="stars" aria-label="5 sterren">★★★★★</div>
+                        <p>"Mijn kinderen gaan hier met een glimlach naartoe. De zachte aanpak van het hele team is fantastisch."</p>
+                        <span class="author">- Sarah M.</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PRAKTISCHE INFO & MAP -->
+        <section class="practical-info" id="contact">
+            <div class="container">
+                <div class="grid info-grid">
+                    <div class="info-details card">
+                        <h2>Praktische Info & Contact</h2>
+                        <address class="info-item">
+                            <strong>📍 Adres:</strong>
+                            <p>Kerkstraat 123, 3520 Zonhoven</p>
+                        </address>
+                        <div class="info-item">
+                            <strong>📞 Telefoon:</strong>
+                            <p><a href="tel:+3211234567">011 23 45 67</a></p>
+                        </div>
+                        <div class="info-item">
+                            <strong>🕒 Openingstijden:</strong>
+                            <ul class="hours-list">
+                                <li><span>Ma - Do:</span> <span>08:30 - 17:30</span></li>
+                                <li><span>Vrijdag:</span> <span>08:30 - 12:30</span></li>
+                                <li><span>Za - Zo:</span> <span>Gesloten</span></li>
+                            </ul>
+                        </div>
+                        <div class="info-item">
+                            <strong>🚗 Parkeren:</strong>
+                            <p>Ruime, gratis privéparking direct achter het praktijkgebouw toegankelijk via de zijstraat.</p>
+                        </div>
+                    </div>
+                    <div class="map-container card">
+                        <!-- Google Maps Embed Placeholder -->
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2511.739968899562!2d5.3645524754756035!3d50.983996848806036!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c126bee1f048ad%3A0x6b163237e73b01c6!2standartsen%20Timmerman-Cloes!5e0!3m2!1snl!2sbe!4v1773394335330!5m2!1snl!2sbe" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">Timmerman&ndash;Cloes.</div>
+                <div class="footer-nav">
+                    <a href="#home">Home</a>
+                    <a href="#behandelingen">Behandelingen</a>
+                    <a href="#team">Team</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Tandartspraktijk Timmerman-Cloes Zonhoven. Alle rechten voorbehouden.</p>
+                <div class="footer-links">
+                    <a href="#">Privacybeleid</a>
+                    <a href="#">Cookiebeleid</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

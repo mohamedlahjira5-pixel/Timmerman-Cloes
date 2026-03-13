@@ -1,0 +1,620 @@
+/* =========================================================================
+   DESIGN SYSTEM & TOKENS 
+   ========================================================================= */
+   :root {
+    /* Kleurenpalet (Natuurlijk, warm, aards) */
+    --color-wood: #b5835a;         /* Warm eikenhout */
+    --color-wood-dark: #8b5a2b;    /* Donker notelaar */
+    --color-taupe: #b3a394;        /* Zacht taupe */
+    --color-taupe-light: #dcd3cb;  /* Warm grijs / licht taupe */
+    --color-bg: #fdfcfb;           /* Zeer licht beige (ademend/clean) */
+    --color-card-bg: #ffffff;      /* Wit voor kaarten/focus */
+    --color-black: #2b2b2b;        /* Strak matzwart */
+    --color-text-body: #4a4a4a;    /* Zachter zwart voor lange teksten */
+    
+    /* Alert Banner (Vriendelijk maar opvallend rood/roze) */
+    --color-alert-bg: #fdf2f2;
+    --color-alert-text: #ab3a3a;
+    --color-alert-badge: #e65252;
+
+    /* Typografie (Modern, leesbaar) */
+    --font-primary: 'Inter', system-ui, -apple-system, sans-serif;
+    
+    /* Vormgeving & Randen */
+    --radius-sm: 8px;
+    --radius-md: 16px;
+    --radius-lg: 24px;
+    
+    /* Schaduwen (Als indirecte LED verlichting / heel zacht) */
+    --shadow-soft: 0 8px 30px rgba(43, 43, 43, 0.04);
+    --shadow-hover: 0 15px 40px rgba(43, 43, 43, 0.08);
+    
+    /* Spacing / Ritme */
+    --space-xs: 0.5rem;
+    --space-sm: 1rem;
+    --space-md: 2rem;
+    --space-lg: 4rem;
+    --space-xl: 6rem;
+}
+
+/* =========================================================================
+   RESET & BASE STIJLEN
+   ========================================================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px; 
+}
+
+body {
+    font-family: var(--font-primary);
+    background-color: var(--color-bg);
+    color: var(--color-text-body);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+    color: var(--color-black);
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+}
+
+img, iframe {
+    max-width: 100%;
+    display: block;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--space-md);
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: var(--space-lg);
+    max-width: 700px;
+    margin-inline: auto;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    margin-bottom: var(--space-sm);
+    letter-spacing: -0.5px;
+}
+
+/* =========================================================================
+   UI COMPONENTEN
+   ========================================================================= */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.8rem 1.8rem;
+    border-radius: 50px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.btn-small {
+    padding: 0.6rem 1.4rem;
+    font-size: 0.95rem;
+}
+
+.btn-large {
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+}
+
+.btn-primary {
+    background-color: var(--color-black);
+    color: #fff;
+    border: 2px solid var(--color-black);
+}
+
+.btn-primary:hover {
+    background-color: var(--color-wood);
+    border-color: var(--color-wood);
+    color: #fff;
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: var(--color-black);
+    border: 2px solid var(--color-taupe-light);
+}
+
+.btn-outline:hover {
+    border-color: var(--color-black);
+}
+
+.card {
+    background: var(--color-card-bg);
+    border-radius: var(--radius-md);
+    padding: var(--space-md);
+    box-shadow: var(--shadow-soft);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-hover);
+}
+
+.grid {
+    display: grid;
+    gap: var(--space-md);
+}
+
+/* =========================================================================
+   ALERT BANNER
+   ========================================================================= */
+.alert-banner {
+    background-color: var(--color-alert-bg);
+    color: var(--color-alert-text);
+    padding: 0.8rem var(--space-md);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-bottom: 1px solid rgba(171, 58, 58, 0.1);
+}
+
+.alert-content {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 0.95rem;
+}
+
+.alert-badge {
+    background-color: var(--color-alert-badge);
+    color: #fff;
+    padding: 0.2rem 0.6rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.close-alert {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--color-alert-text);
+    cursor: pointer;
+    position: absolute;
+    right: var(--space-md);
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.7;
+}
+
+.close-alert:hover {
+    opacity: 1;
+}
+
+/* =========================================================================
+   HEADER & NAVIGATIE
+   ========================================================================= */
+.main-header {
+    background-color: rgba(253, 252, 251, 0.95);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    padding: 1.2rem 0;
+    border-bottom: 1px solid rgba(0,0,0,0.03);
+    transition: all 0.3s ease;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+.logo a {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--color-black);
+    letter-spacing: -0.5px;
+}
+
+.logo span {
+    color: var(--color-wood);
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2.5rem;
+}
+
+.main-nav a {
+    font-weight: 500;
+    font-size: 1.05rem;
+}
+
+.main-nav a:hover {
+    color: var(--color-wood);
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.phone-link-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.pulse-dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-color: var(--color-alert-badge);
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(230, 82, 82, 0.5); }
+    70% { box-shadow: 0 0 0 6px rgba(230, 82, 82, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(230, 82, 82, 0); }
+}
+
+.phone-link {
+    font-weight: 600;
+    color: var(--color-black);
+    font-size: 0.95rem;
+}
+
+.phone-link:hover {
+    color: var(--color-alert-badge);
+}
+
+/* =========================================================================
+   HERO SECTIE
+   ========================================================================= */
+.hero {
+    padding: var(--space-xl) 0;
+}
+
+.hero-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-xl);
+    align-items: center;
+}
+
+.hero h1 {
+    font-size: 3.8rem;
+    margin-bottom: var(--space-sm);
+    letter-spacing: -1.5px;
+}
+
+.hero h1 span {
+    color: var(--color-wood);
+}
+
+.hero p {
+    font-size: 1.25rem;
+    margin-bottom: var(--space-md);
+    color: var(--color-text-body);
+    max-width: 90%;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.hero-image .image-placeholder {
+    width: 100%;
+    min-height: 550px;
+    background: linear-gradient(135deg, var(--color-taupe-light) 0%, var(--color-taupe) 100%);
+    border-radius: var(--radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: 500;
+    box-shadow: var(--shadow-soft);
+}
+
+/* =========================================================================
+   BEHANDELINGEN GRID
+   ========================================================================= */
+.treatments {
+    padding: var(--space-xl) 0;
+}
+
+.treatments-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.card-icon {
+    font-size: 2.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.treatment-card {
+    border: 1px solid rgba(0,0,0,0.02);
+}
+
+.treatment-card h3 {
+    margin-bottom: 0.8rem;
+    font-size: 1.3rem;
+}
+
+/* =========================================================================
+   INTEGRATIES (Calendly & Freeform)
+   ========================================================================= */
+.appointments-booking {
+    padding: var(--space-xl) 0;
+    background-color: var(--color-taupe-light);
+    background-image: linear-gradient(to bottom, var(--color-bg), rgba(220, 211, 203, 0.2));
+}
+
+.integration-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-lg);
+}
+
+.integration-card h3 {
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid var(--color-bg);
+    padding-bottom: 0.5rem;
+}
+
+/* Form Styles Skeleton */
+.form-skeleton {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    margin-top: 1.5rem;
+}
+
+.form-skeleton label {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-weight: 500;
+    color: var(--color-black);
+}
+
+.form-skeleton input {
+    padding: 0.8rem 1rem;
+    border: 1px solid var(--color-taupe-light);
+    border-radius: var(--radius-sm);
+    font-family: inherit;
+    font-size: 1rem;
+    background: var(--color-bg);
+}
+
+.form-skeleton input:focus {
+    outline: none;
+    border-color: var(--color-wood);
+    box-shadow: 0 0 0 3px rgba(181, 131, 90, 0.1);
+}
+
+/* =========================================================================
+   TESTIMONIALS
+   ========================================================================= */
+.testimonials {
+    padding: var(--space-xl) 0;
+}
+
+.testimonials-grid {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+.stars {
+    color: var(--color-wood);
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    letter-spacing: 2px;
+}
+
+.testimonial-card p {
+    font-style: italic;
+    font-size: 1.1rem;
+    color: var(--color-black);
+}
+
+.author {
+    display: block;
+    margin-top: 1.5rem;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--color-taupe);
+}
+
+/* =========================================================================
+   PRAKTISCHE INFO & CONTACT
+   ========================================================================= */
+.practical-info {
+    padding: var(--space-xl) 0;
+}
+
+.info-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-lg);
+}
+
+.info-details h2 {
+    margin-bottom: var(--space-md);
+}
+
+.info-item {
+    margin-bottom: 1.8rem;
+    font-style: normal;
+}
+
+.info-item strong {
+    color: var(--color-black);
+    display: inline-block;
+    margin-bottom: 0.3rem;
+}
+
+.hours-list {
+    list-style: none;
+    margin-top: 0.5rem;
+}
+
+.hours-list li {
+    display: flex;
+    justify-content: space-between;
+    max-width: 250px;
+    margin-bottom: 0.3rem;
+    border-bottom: 1px dashed var(--color-taupe-light);
+    padding-bottom: 0.2rem;
+}
+
+.map-container {
+    padding: 0;
+    overflow: hidden;
+    min-height: 400px;
+}
+
+/* =========================================================================
+   FOOTER
+   ========================================================================= */
+.main-footer {
+    background-color: var(--color-black);
+    color: rgba(255,255,255,0.7);
+    padding: var(--space-xl) 0 var(--space-md);
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding-bottom: var(--space-md);
+    margin-bottom: var(--space-md);
+}
+
+.footer-logo {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: -0.5px;
+}
+
+.footer-nav {
+    display: flex;
+    gap: 2rem;
+}
+
+.footer-nav a {
+    color: #fff;
+}
+
+.footer-nav a:hover {
+    color: var(--color-wood);
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+}
+
+.footer-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+/* =========================================================================
+   RESPONSIVE (Mobielvriendelijkheid / SEO layout shift fix)
+   ========================================================================= */
+@media (max-width: 1024px) {
+    .container {
+        padding: 0 var(--space-sm);
+    }
+    .hero h1 {
+        font-size: 3rem;
+    }
+    .hero-container {
+        gap: var(--space-md);
+    }
+}
+
+@media (max-width: 900px) {
+    .main-nav, .header-actions {
+        display: none; /* In een live app is hier een hamburger menu vereist */
+    }
+    .hero-container, .integration-grid, .info-grid {
+        grid-template-columns: 1fr;
+    }
+    .hero {
+        text-align: center;
+    }
+    .hero p {
+        margin: 0 auto var(--space-md);
+    }
+    .hero-buttons {
+        justify-content: center;
+    }
+    .hero-image .image-placeholder {
+        min-height: 400px;
+        margin-top: var(--space-md);
+    }
+    .footer-content, .footer-bottom {
+        flex-direction: column;
+        gap: 1.5rem;
+        text-align: center;
+    }
+}
+
+@media (max-width: 600px) {
+    :root {
+        --space-xl: 4rem;
+        --space-lg: 2.5rem;
+    }
+    .hero h1 {
+        font-size: 2.3rem;
+    }
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+    .btn {
+        width: 100%;
+    }
+    .alert-content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+    .close-alert {
+        top: 15px;
+        right: 15px;
+        transform: none;
+    }
+}
